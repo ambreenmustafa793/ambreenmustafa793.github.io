@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ambreen Mustafa Portfolio</title>
+
+<style>
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: #00ffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff00cc;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Profile Image */
+.profile {
+  display: block;
+  margin: 0 auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #ff9900;
+  object-fit: cover;
+  box-shadow: 0 0 20px #3700ff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 35px #09ff00;
+}
+
+h1 {
+  font-size: 45px;
+  color: #00ffff;
+  margin: 15px 0;
+}
+
+.typing {
+  font-size: 20px;
+  color: #ffccff;
+  min-height: 25px;
+}
+
+/* Section Titles */
+section h2 {
+  text-align: center;
+  color: #ffccff;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Skills */
+.skills ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.skills li {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff00cc, #00ffff);
+  margin: 10px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills li:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ff00cc;
+}
+
+/* Project Cards */
+.card {
+  background: rgba(255,255,255,0.1);
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
+  .typing {
+    font-size: 16px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+  <a href="#">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header>
+  <!-- New Business Girl Image -->
+  <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" 
+       alt="Business Girl" class="profile">
+
+  <h1>Ambreen Mustafa</h1>
+  <p class="typing"></p>
+</header>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>
+    I am Ambreen Mustafa, a BS English graduate. Ambitious, hardworking, and confident,
+    I aim to become independent and build a strong career. I have completed an IT course 
+    and a university research project. I am a motivated learner and a good speaker.
+  </p>
+</section>
+
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>Content Writing</li>
+    <li>Web Development</li>
+    <li>MS Excel</li>
+    <li>MS Word</li>
+    <li>PowerPoint</li>
+    <li>Communication & Public Speaking</li>
+  </ul>
+</section>
+
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>University Research Project</h3>
+    <p>Completed a research-based academic project during BS English.</p>
+  </div>
+
+  <div class="card">
+    <h3>Canva & Pinterest Designs</h3>
+    <p>I create creative pins for home decor and women fashion using Canva.</p>
+  </div>
+</section>
+
+<section class="hobbies">
+  <h2>Hobbies & Interests</h2>
+  <p>Drawing, Mehndi, Reading Novels, Painting, Designing on Canva</p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Email: ambreen@email.com</p>
+</section>
+
+<footer>
+  <p>© 2026 Ambreen Mustafa</p>
+</footer>
+
+<script>
+// Typing effect
+const text = "Content Writer | Web Developer | Designer";
+let i = 0;
+
+function typing() {
+  if (i < text.length) {
+    document.querySelector(".typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 100);
+  }
+}
+
+typing();
+</script>
+
+</body>
+</html>

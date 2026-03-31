@@ -2,126 +2,130 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Ambreen Mustafa Portfolio</title>
+<title>Ambreen Mustafa | Portfolio</title>
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-/* General Styles */
+:root {
+  --dark: #0D1B2A;
+  --blue: #1B263B;
+  --accent: #E63946;
+  --soft: #A8DADC;
+  --light: #F1FAEE;
+}
+
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  color: white;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--dark), var(--blue));
+  color: var(--light);
 }
 
 /* Navbar */
 nav {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 30px;
-  background: rgba(0,0,0,0.7);
+  gap: 25px;
   padding: 15px;
-  position: sticky;
-  top: 0;
+  background: rgba(0,0,0,0.6);
 }
 
 nav a {
-  color: #00ffff;
+  color: var(--soft);
   text-decoration: none;
-  font-size: 18px;
-  transition: 0.3s;
+  font-weight: bold;
 }
 
 nav a:hover {
-  color: #ff00cc;
+  color: var(--accent);
 }
 
 /* Header */
 header {
   text-align: center;
-  padding: 60px 20px;
+  padding: 50px;
 }
 
-/* Profile Image */
 .profile {
-  display: block;
-  margin: 0 auto;
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  border: 5px solid #ff9900;
-  object-fit: cover;
-  box-shadow: 0 0 20px #3700ff;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border: 4px solid var(--soft);
+  box-shadow: 0 0 20px var(--accent);
 }
 
-.profile:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 35px #09ff00;
+/* CV Button */
+.cv-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 30px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
 }
 
-h1 {
-  font-size: 45px;
-  color: #00ffff;
-  margin: 15px 0;
+.cv-btn:hover {
+  background: var(--soft);
+  color: black;
 }
 
-.typing {
-  font-size: 20px;
-  color: #ffccff;
-  min-height: 25px;
+/* Social Icons */
+.social {
+  margin-top: 20px;
 }
 
-/* Section Titles */
-section h2 {
-  text-align: center;
-  color: #ffccff;
-  font-size: 30px;
-  margin-bottom: 20px;
+.social a {
+  color: var(--soft);
+  font-size: 24px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  color: var(--accent);
 }
 
 /* Sections */
 section {
-  padding: 40px 20px;
+  padding: 40px;
   max-width: 900px;
   margin: auto;
 }
 
-/* Skills */
-.skills ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
+h1 {
+  color: var(--soft);
 }
 
+h2 {
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Skills */
 .skills li {
   display: inline-block;
-  background: linear-gradient(45deg, #ff00cc, #00ffff);
-  margin: 10px;
-  padding: 12px 20px;
-  border-radius: 30px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 8px;
+  padding: 10px 18px;
+  background: var(--soft);
+  color: black;
+  border-radius: 20px;
 }
 
-.skills li:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #ff00cc;
-}
-
-/* Project Cards */
+/* Cards */
 .card {
-  background: rgba(255,255,255,0.1);
-  margin: 20px auto;
-  padding: 25px;
-  border-radius: 15px;
-  width: 90%;
-  max-width: 600px;
-  transition: transform 0.3s, background 0.3s;
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.05);
-  background: rgba(255,255,255,0.2);
+  transform: scale(1.03);
+  background: rgba(255,255,255,0.15);
 }
 
 /* Footer */
@@ -130,24 +134,12 @@ footer {
   padding: 20px;
   background: black;
 }
-
-/* Responsive */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 32px;
-  }
-  .typing {
-    font-size: 16px;
-  }
-}
 </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
 <nav>
-  <a href="#">Home</a>
   <a href="#about">About</a>
   <a href="#skills">Skills</a>
   <a href="#projects">Projects</a>
@@ -155,55 +147,82 @@ footer {
 </nav>
 
 <header>
-  <!-- New Business Girl Image -->
-  <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" 
-       alt="Business Girl" class="profile">
+
+  <!-- New Professional Girl Image -->
+  <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" class="profile">
 
   <h1>Ambreen Mustafa</h1>
-  <p class="typing"></p>
+
+  <p>
+    💻 Web Developer | ✍ Content Writer | 🎤 Confident Speaker
+  </p>
+
+  <p>
+    "I transform ideas into creative digital experiences and believe in continuous learning and growth."
+  </p>
+
+
+  <!-- Social Icons -->
+  <div class="social">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+
 </header>
 
-<section id="about" class="about">
-  <h2>About Me</h2>
+<section id="about">
+  <h2>Professional Summary</h2>
   <p>
-    I am Ambreen Mustafa, a BS English graduate. Ambitious, hardworking, and confident,
-    I aim to become independent and build a strong career. I have completed an IT course 
-    and a university research project. I am a motivated learner and a good speaker.
+    I am a passionate IT learner and web developer with strong communication and presentation skills.
+    I am a confident speaker who can clearly express ideas and engage with different audiences.
+  </p>
+  <p>
+    My goal is to become independent, build a successful career, and contribute positively in the digital world.
   </p>
 </section>
 
 <section id="skills" class="skills">
   <h2>Skills</h2>
   <ul>
-    <li>Content Writing</li>
-    <li>Web Development</li>
-    <li>MS Excel</li>
-    <li>MS Word</li>
-    <li>PowerPoint</li>
-    <li>Communication & Public Speaking</li>
+    <li>HTML & CSS</li>
+    <li>Basic JavaScript</li>
+    <li>MS Office</li>
+    <li>Canva Designing</li>
+    <li>Communication Skills</li>
   </ul>
 </section>
 
-<section id="projects" class="projects">
+<section id="projects">
   <h2>Projects</h2>
 
   <div class="card">
-    <h3>University Research Project</h3>
-    <p>Completed a research-based academic project during BS English.</p>
+    <h3>Portfolio Website</h3>
+    <p>
+      Designed and developed a personal portfolio website using HTML and CSS.
+      The website showcases my skills, projects, and personal information in a professional format.
+      It is fully responsive and visually appealing.
+    </p>
   </div>
 
   <div class="card">
-    <h3>Canva & Pinterest Designs</h3>
-    <p>I create creative pins for home decor and women fashion using Canva.</p>
+    <h3>University Research Project</h3>
+    <p>
+      Conducted a detailed academic research project during my BS English program.
+      The project involved critical analysis, data collection, and structured writing.
+      It enhanced my research abilities, analytical thinking, and presentation skills.
+    </p>
   </div>
+
 </section>
 
-<section class="hobbies">
-  <h2>Hobbies & Interests</h2>
-  <p>Drawing, Mehndi, Reading Novels, Painting, Designing on Canva</p>
+<section>
+  <h2>Hobbies</h2>
+  <p>
+    🎨 Drawing & Painting | 🌿 Mehndi Art | 📚 Reading Novels | 💡 Creative Designing
+  </p>
 </section>
 
-<section id="contact" class="contact">
+<section id="contact">
   <h2>Contact</h2>
   <p>Email: ambreen@email.com</p>
 </section>
@@ -211,22 +230,6 @@ footer {
 <footer>
   <p>© 2026 Ambreen Mustafa</p>
 </footer>
-
-<script>
-// Typing effect
-const text = "Content Writer | Web Developer | Designer";
-let i = 0;
-
-function typing() {
-  if (i < text.length) {
-    document.querySelector(".typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typing, 100);
-  }
-}
-
-typing();
-</script>
 
 </body>
 </html>
